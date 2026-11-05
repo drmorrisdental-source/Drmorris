@@ -1,0 +1,41 @@
+---
+import Arrow from './Arrow.astro';
+const pathname = Astro.url.pathname;
+---
+<header class="header" id="top">
+  <a class="wordmark" href="/">Dr. Eitan Morris</a>
+  <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false" hidden><span></span><span></span></button>
+  <nav id="navigation" class="navigation" aria-label="Main navigation">
+    <a href="/about/" aria-current={pathname === '/about/' ? 'page' : undefined}>About me</a>
+    <a href="/clinics/" aria-current={pathname === '/clinics/' ? 'page' : undefined}>Clinics &amp; appointments</a>
+  </nav>
+  <a class="button header-cta" href="/about/#get-in-touch">Let’s talk <Arrow diagonal /></a>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('.navigation');
+  // Without JavaScript, the navigation remains visible and usable.
+  toggle?.removeAttribute('hidden');
+  nav?.classList.add('enhanced');
+  function closeMenu() {
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Open navigation');
+    nav?.classList.remove('is-open');
+  }
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+    nav?.classList.toggle('is-open', !open);
+  });
+  nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+      closeMenu(); toggle.focus();
+    }
+  });
+  document.addEventListener('click', e => {
+    if (e.target instanceof Node && !nav?.contains(e.target) && !toggle?.contains(e.target)) closeMenu();
+  });
+  matchMedia('(min-width: 761px)').addEventListener('change', closeMenu);
+</script>

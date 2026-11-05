@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../content/site';
+---
+<Base title="About Dr. Eitan Morris | Dentist" description="Meet Dr. Eitan Morris, a dentist and part-time educator at the Hebrew University of Jerusalem.">
+  <Header />
+  <main id="main" class="subpage about-page">
+    <a class="back-link" href="/">← Back to home</a>
+    <div class="about-page-grid">
+      <div class="about-page-copy">
+        <span class="eyebrow">MEET YOUR DENTIST</span>
+        <h1>Hi, I’m<br />Dr. Eitan<br /><span class="muted">Morris.</span></h1>
+        <p class="page-lead">A dentist. An educator.<br />A person who cares.</p>
+        <p>I received my Doctorate of Dental Medicine from the Hebrew University of Jerusalem, where I currently teach part time.</p>
+        <p class="content-placeholder">More about my background and approach is coming soon.</p>
+        <section class="get-in-touch" id="get-in-touch" aria-labelledby="get-in-touch-title"><h2 id="get-in-touch-title">Get in touch.</h2><p>Have a question? I’d love to hear from you.</p><a class="email-link" href={`mailto:${site.contact.email}`}>{site.contact.email} <Arrow diagonal /></a><p class="clinic-link"><a class="inline-link" href="/clinics/">Clinics &amp; appointments →</a></p></section>
+      </div>
+      <div class="about-page-photo"><img src="/images/dr-eitan-morris.png" alt="Dr. Eitan Morris smiling in black dental scrubs" width="1312" height="1199" fetchpriority="high" /></div>
+    </div>
+  </main>
+  <Footer />
+</Base>

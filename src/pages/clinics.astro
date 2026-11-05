@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Arrow from '../components/Arrow.astro';
+---
+<Base title="Clinics & Appointments | Dr. Eitan Morris" description="Clinic locations and appointment booking information for Dr. Eitan Morris are coming soon.">
+  <Header />
+  <main id="main" class="subpage clinics-page">
+    <a class="back-link" href="/">← Back to home</a>
+    <section class="coming-soon" aria-labelledby="clinics-title">
+      <span class="eyebrow">CLINICS &amp; APPOINTMENTS</span>
+      <h1 id="clinics-title">The right care.<br />A place <span class="muted">near you.</span></h1>
+      <span class="coming-soon-label">Coming soon</span>
+      <p class="page-lead">Clinic locations, maps, and how to book your appointment.<br />All the details will be right here.</p>
+      <a class="button" href="/about/#get-in-touch">Get in touch <Arrow diagonal /></a>
+    </section>
+  </main>
+  <Footer />
+</Base>

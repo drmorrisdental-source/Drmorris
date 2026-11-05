@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../content/site';
+---
+<Base>
+  <Header />
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo"><img src="/images/dr-eitan-morris.png" alt="Dr. Eitan Morris smiling in his black dental scrubs" width="1312" height="1199" fetchpriority="high" /><div class="photo-fade"></div></div>
+      <div class="hero-title-block"><span class="status-pill"><span aria-hidden="true"></span> A personal approach to dentistry</span><h1 id="hero-title">Your smile.<br />Your confidence.<br />My commitment.</h1></div>
+      <div class="hero-intro"><p>I’m Dr. Eitan Morris. A dentist, an educator, and a firm believer that great dental care starts with a real connection.</p><a href="/about/" class="button">Meet your dentist <Arrow diagonal /></a></div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to learn about Dr. Morris">Scroll to explore <span>↓</span></a>
+    </section>
+    <section class="about section-pad" id="about" aria-labelledby="about-title">
+      <div class="section-top"><span class="eyebrow">01 / ABOUT ME</span><span class="tiny-note">A person first. A dentist second.</span></div>
+      <div class="about-grid"><h2 id="about-title">Good care.<br />A real<br /><span class="muted">connection.</span></h2><div class="about-copy"><p class="large-copy">Behind every smile is a person. That’s where I start.</p><p>I received my Doctorate of Dental Medicine from the Hebrew University of Jerusalem, where I currently teach part time.</p><p>My approach is simple: listen closely, explain clearly, and make room for the questions that matter to you.</p><div class="credential"><span>DMD</span><div>Hebrew University of Jerusalem<small>Dental medicine · Part-time teaching</small></div></div></div></div>
+    </section>
+    <section class="approach section-pad" id="approach" aria-labelledby="approach-title"><div class="section-top"><span class="eyebrow">02 / THE APPROACH</span><span class="tiny-note">Small details. A meaningful difference.</span></div><h2 id="approach-title">Dentistry that<br /><span class="muted">puts you first.</span></h2><div class="principles">{site.principles.map(item => <article><span class="item-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p><Arrow diagonal /></article>)}</div></section>
+    <section class="testimonial section-pad" aria-label="Patient testimonial"><span class="eyebrow">IN A PATIENT’S WORDS</span><span class="quote-mark" aria-hidden="true">“</span><blockquote>Thank you from the bottom of my heart for making this such a <span>special experience.</span></blockquote><span class="quote-credit">A patient’s testimonial from the original Dr. Morris website</span></section>
+    <section class="faq section-pad" aria-labelledby="faq-title"><div><span class="eyebrow">03 / BEFORE YOUR VISIT</span><h2 id="faq-title">A few good<br /><span class="muted">questions.</span></h2></div><div class="faq-list">{site.faqs.slice(0,3).map(item=><details><summary>{item.question}<span class="faq-icon" aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><span class="eyebrow">LET’S START WITH A CONVERSATION</span><div class="contact-heading"><h2 id="contact-title">Your next<br />chapter starts<br /><span class="muted">with a smile.</span></h2><span class="contact-arrow" aria-hidden="true">↗</span></div><div class="contact-bottom"><p>Treating patients at select clinic locations.<br /><a class="inline-link" href="/clinics/">Clinics &amp; appointments — coming soon.</a></p><a class="button" href="/about/#get-in-touch">Get in touch <Arrow diagonal /></a></div></section>
+  </main>
+  <Footer />
+</Base>

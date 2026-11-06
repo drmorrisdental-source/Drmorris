@@ -65,3 +65,38 @@ html[lang="he"] .hebrew-page .he-quote{font-size:clamp(21px,2.8vw,34px);line-hei
 .contact-bottom>p{font-size:var(--body-copy-size);line-height:1.8}.contact .eyebrow{font-size:var(--section-label-size)}
 @media(max-width:760px){:root{--section-heading-size:clamp(36px,9vw,48px);--section-label-size:clamp(19px,5.4vw,23px);--body-copy-size:16px}.header{gap:8px;padding-inline:4%}.wordmark{font-size:clamp(16px,4.4vw,21px)}.header-actions{gap:7px}.language-switch,.header-cta{height:40px;min-height:40px;padding:0 10px;font-size:12px;border-radius:10px}.header-cta,html[dir=rtl] .header-cta{display:inline-flex}.menu-toggle{width:40px;height:40px;flex-shrink:0}.section-pad{padding-block:60px}.he-quote-slides,.testimonial-slides{min-height:170px}.testimonial .testimonial-slide,html[lang="he"] .hebrew-page .he-quote{font-size:clamp(20px,5vw,25px);line-height:1.6}.he-hero{padding-top:48px}.he-hero h1{font-size:clamp(38px,9.5vw,52px)}.he-hero-copy{gap:17px}.he-about h2,.he-panel h2,.he-faq h2,.he-contact h2{overflow-wrap:break-word}.contact-bottom>p{font-size:16px}.testimonial .quote-mark,.he-quote-mark{font-size:65px}}
 @media(max-width:390px){.wordmark{font-size:15px}.language-switch,.header-cta{padding-inline:8px;font-size:11px}.header-actions{gap:5px}.header{gap:5px}}
+
+
+/* Readability pass: larger supporting copy, credentials and FAQs across languages */
+:root{--body-copy-size:clamp(18px,1.55vw,21px);--faq-copy-size:clamp(18px,1.55vw,21px)}
+main .about-copy p:not(.large-copy),main .principles p,main .faq details p,main .contact-bottom p,
+html[lang="he"] .hebrew-page .he-about>p:not(.page-lead),html[lang="he"] .hebrew-page .he-about .he-degrees p,
+html[lang="he"] .hebrew-page .he-cards p,html[lang="he"] .hebrew-page .he-faq-list details p{
+ font-size:var(--body-copy-size);line-height:1.75;
+}
+main .about-copy .large-copy,html[lang="he"] .hebrew-page .he-about .page-lead{font-size:clamp(22px,2.2vw,28px);line-height:1.55}
+main .degree-item{grid-template-columns:minmax(105px,auto) 1fr;align-items:start;gap:20px}
+main .degree-item strong{font-size:clamp(19px,1.7vw,23px);line-height:1.45}
+main .degree-item b{font-size:clamp(18px,1.5vw,21px);line-height:1.5}
+main .degree-item small{font-size:clamp(16px,1.35vw,19px);line-height:1.6}
+html[lang="he"] .hebrew-page .he-degrees p{max-width:none}
+html[lang="he"] .hebrew-page .he-degrees strong{font-size:inherit}
+main .faq summary,html[lang="he"] .hebrew-page .he-faq-list summary{
+ font-size:var(--faq-copy-size);line-height:1.65;font-weight:650;
+}
+main .faq details p,html[lang="he"] .hebrew-page .he-faq-list details p{
+ font-size:var(--faq-copy-size);line-height:1.7;
+}
+main .contact-bottom>p{font-size:clamp(19px,1.65vw,23px);line-height:1.7;color:var(--ink)}
+main .contact-bottom .inline-link{font-size:inherit}
+html[lang="he"] .hebrew-page .he-contact .clinic-availability{font-size:clamp(19px,1.65vw,23px);line-height:1.7;color:#E2E8F0!important;margin-top:24px;max-width:38ch}
+html[lang="he"] .hebrew-page .he-contact .clinic-availability a{color:#FDBA74;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){
+ :root{--body-copy-size:18px;--faq-copy-size:18px}
+ main .degree-item{grid-template-columns:minmax(78px,auto) 1fr;gap:13px}
+ main .degree-item strong{font-size:18px}
+ main .degree-item b{font-size:18px}
+ main .degree-item small{font-size:16px}
+ main .about-copy .large-copy,html[lang="he"] .hebrew-page .he-about .page-lead{font-size:23px}
+ main .contact-bottom>p,html[lang="he"] .hebrew-page .he-contact .clinic-availability{font-size:19px}
+}

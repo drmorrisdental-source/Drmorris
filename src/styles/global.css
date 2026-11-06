@@ -122,3 +122,16 @@ html[lang="he"] .hebrew-page .he-contact .clinic-availability a{color:#FDBA74;te
   order:0;width:100%;position:relative;gap:18px;align-items:flex-start;
  }
 }
+
+
+/* Final small mobile-only refinements */
+.about-title-mobile{display:none}
+@media(max-width:760px){
+ .about-title-desktop{display:none}
+ .about-title-mobile{display:inline}
+ .about-title-mobile .about-real-phrase{display:inline-block;white-space:nowrap;font-size:clamp(26px,7.4vw,38px);letter-spacing:-.045em}
+ .header .wordmark,html[dir="rtl"] .header .wordmark{font-size:clamp(19px,5.1vw,24px);font-weight:750;letter-spacing:-.045em}
+}
+@media(max-width:390px){
+ .header .wordmark,html[dir="rtl"] .header .wordmark{font-size:clamp(18px,4.85vw,20px)}
+}

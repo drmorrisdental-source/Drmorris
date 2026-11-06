@@ -25,6 +25,11 @@ export const site = {
     { number: '02', title: 'Clarity, at every step.', text: 'Understand your options, ask your questions, and feel informed about the next step in your care.' },
     { number: '03', title: 'Care that feels personal.', text: 'Your needs, your priorities, your smile. A thoughtful approach starts with seeing the person behind it.' },
   ],
+  testimonials: [
+    { lang: 'en', text: 'I had my first meal with my dentures. I was so amazed at how well it went -no pain and quite comfortable. All of the above is purely because all of your patience and hard work. I thank you from the bottom of my heart for making this such a special experience.' },
+    { lang: 'he', text: 'היכולת שלך לתת לילד שהולך לרופא שיניים תחושה של כיף ורצון לחזור פשוט מדהימה. אי אומרת שהולכים לרופא שיניים עם חיוך ענק ותמיד חוזרת עם חשק לחזור.' },
+    { lang: 'he', text: 'היינו אצל כל כך הרבה רופאים ופעם ראשונה שני היה ככה בטוב וסיפר בהתלהבות כשחזר הביתה.' },
+  ],
   visit: [
     { number: '01', title: 'Let’s get to know you', text: 'A chance to talk about your dental history, your concerns, and what you’d like to achieve.' },
     { number: '02', title: 'Understand your smile', text: 'An examination helps build a picture of your oral health and identify what needs attention.' },

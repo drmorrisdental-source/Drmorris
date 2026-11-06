@@ -4,12 +4,12 @@ import '@fontsource/manrope/latin-500.css';
 import '@fontsource/manrope/latin-600.css';
 import '../styles/global.css';
 import { site } from '../content/site';
-interface Props { title?: string; description?: string }
-const { title = site.title, description = site.description } = Astro.props;
+interface Props { title?: string; description?: string; lang?: 'en' | 'he' }
+const { title = site.title, description = site.description, lang = 'en' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
-<html lang={site.language} dir={site.direction}>
+<html lang={lang} dir={lang === "he" ? "rtl" : "ltr"}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,12 +21,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={lang === "he" ? "he_IL" : "en_US"} />
+    <link rel="alternate" hreflang="he" href={new URL(lang === "he" ? Astro.url.pathname : "/he" + (Astro.url.pathname === "/" ? "/" : Astro.url.pathname), Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(lang === "he" ? Astro.url.pathname.replace(/^\/he\//, "/") : Astro.url.pathname, Astro.site)} />
     <meta name="twitter:card" content="summary" />
     <title>{title}</title>
   </head>
   <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link">{lang === "he" ? "דילוג לתוכן" : "Skip to content"}</a>
     <slot />
   </body>
 </html>

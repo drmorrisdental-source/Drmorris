@@ -1,15 +1,19 @@
 ---
 import Arrow from './Arrow.astro';
 const pathname = Astro.url.pathname;
+const he = pathname.startsWith('/he/');
+const section = pathname.replace(/^\/he/, '') || '/';
+const counterpart = he ? section : '/he' + (pathname === '/' ? '/' : pathname);
 ---
 <header class="header" id="top">
-  <a class="wordmark" href="/">Dr. Eitan Morris</a>
-  <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false" hidden><span></span><span></span></button>
-  <nav id="navigation" class="navigation" aria-label="Main navigation">
-    <a href="/about/" aria-current={pathname === '/about/' ? 'page' : undefined}>About me</a>
-    <a href="/clinics/" aria-current={pathname === '/clinics/' ? 'page' : undefined}>Clinics &amp; appointments</a>
+  <a class="wordmark" href={he ? "/he/" : "/"}>{he ? "ד״ר איתן מוריס" : "Dr. Eitan Morris"}</a>
+  <button class="menu-toggle" type="button" aria-label={he ? "פתיחת תפריט" : "Open navigation"} aria-controls="navigation" aria-expanded="false" hidden><span></span><span></span></button>
+  <nav id="navigation" class="navigation" aria-label={he ? "ניווט ראשי" : "Main navigation"}>
+    {he && <a href="/he/" aria-current={pathname === "/he/" ? "page" : undefined}>בית</a>}
+    <a href={he ? "/he/about/" : "/about/"} aria-current={section === '/about/' ? 'page' : undefined}>{he ? "קצת עליי" : "About me"}</a>
+    <a href={he ? "/he/clinics/" : "/clinics/"} aria-current={section === '/clinics/' ? 'page' : undefined}>{he ? "מרפאות וקביעת תורים" : "Clinics & appointments"}</a>
   </nav>
-  <a class="button header-cta" href="/about/#get-in-touch">Let’s talk <Arrow diagonal /></a>
+  <div class="header-actions"><a class="language-switch" href={counterpart} lang={he ? "en" : "he"} aria-label={he ? "Switch to English" : "מעבר לעברית"}>{he ? "EN" : "עברית"}</a><a class="button header-cta" href={he ? "/he/about/#get-in-touch" : "/about/#get-in-touch"}>{he ? "בואו נדבר" : "Let’s talk"} <Arrow diagonal /></a></div>
 </header>
 <script>
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');

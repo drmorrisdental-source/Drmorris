@@ -1,5 +1,4 @@
 ---
-import Arrow from './Arrow.astro';
 const pathname = Astro.url.pathname;
 const he = pathname.startsWith('/he/');
 const section = pathname.replace(/^\/he/, '') || '/';
@@ -13,7 +12,7 @@ const counterpart = he ? section : '/he' + (pathname === '/' ? '/' : pathname);
     <a href={he ? "/he/about/" : "/about/"} aria-current={section === '/about/' ? 'page' : undefined}>{he ? "קצת עליי" : "About me"}</a>
     <a href={he ? "/he/clinics/" : "/clinics/"} aria-current={section === '/clinics/' ? 'page' : undefined}>{he ? "מרפאות וקביעת תורים" : "Clinics & appointments"}</a>
   </nav>
-  <div class="header-actions"><a class="language-switch" href={counterpart} lang={he ? "en" : "he"} aria-label={he ? "Switch to English" : "מעבר לעברית"}>{he ? "EN" : "עברית"}</a><a class="button header-cta" href={he ? "/he/about/#get-in-touch" : "/about/#get-in-touch"}>{he ? "בואו נדבר" : "Let’s talk"} <Arrow diagonal /></a></div>
+  <div class="header-actions"><a class="language-switch" href={counterpart} lang={he ? "en" : "he"} aria-label={he ? "Switch to English" : "מעבר לעברית"}>{he ? "EN" : "עברית"}</a><a class="button header-cta" href={he ? "/he/about/#get-in-touch" : "/about/#get-in-touch"}>{he ? "בואו נדבר" : "Let’s talk"} </a></div>
 </header>
 <script>
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');

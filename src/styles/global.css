@@ -31,3 +31,17 @@ html[dir=rtl] .navigation a{white-space:nowrap}
 html[dir=rtl] .header-actions{margin-inline-start:0;flex-shrink:0}
 @media(max-width:1100px) and (min-width:761px){html[dir=rtl] .header{height:auto;min-height:100px;flex-wrap:wrap;padding-block:16px}html[dir=rtl] .navigation{position:static;transform:none;order:3;width:100%;justify-content:center;gap:28px}}
 @media(max-width:760px){html[dir=rtl] .header{height:88px;min-height:88px;flex-wrap:nowrap;padding:0 6%;gap:12px}html[dir=rtl] .menu-toggle:not([hidden]){display:flex!important;order:0}html[dir=rtl] .navigation{display:none;position:absolute;left:0;right:0;top:87px;transform:none;width:100%;order:initial;padding:20px 6%;border-bottom:1px solid #E2E8F0;background:white;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;font-size:15px}html[dir=rtl] .navigation.is-open{display:flex}html[dir=rtl] .navigation a{padding:13px 0}html[dir=rtl] .navigation:not(.enhanced){display:flex;position:static;flex-direction:row;flex-wrap:wrap;gap:14px;width:100%;padding:0;border:0}html[dir=rtl] .header:has(.navigation:not(.enhanced)){height:auto;flex-wrap:wrap;padding-block:16px}html[dir=rtl] .header-actions{margin-inline-start:auto}html[dir=rtl] .header-cta{display:none}}
+
+/* Hebrew typography refinement: consistent rhythm, readable lines and responsive headings */
+html[lang="he"] body{font-family:Arial,"Noto Sans Hebrew",sans-serif;line-height:1.65}
+html[lang="he"] .hebrew-page h1,html[lang="he"] .hebrew-page h2,html[lang="he"] .hebrew-page h3{font-family:inherit;line-height:1.18;letter-spacing:-.025em;text-wrap:balance}
+html[lang="he"] .hebrew-page h1{font-size:clamp(42px,6.2vw,82px)}
+html[lang="he"] .hebrew-page h2{font-size:clamp(34px,4.5vw,62px);max-width:22ch}
+html[lang="he"] .hebrew-page h3{font-size:clamp(19px,2vw,25px)}
+html[lang="he"] .hebrew-page p{font-size:clamp(16px,1.25vw,18px);line-height:1.85;max-width:65ch}
+html[lang="he"] .hebrew-page .page-lead{font-size:clamp(19px,2vw,25px);line-height:1.65;max-width:48ch}
+html[lang="he"] .hebrew-page .eyebrow{font-size:12px;letter-spacing:0;font-weight:700}
+html[lang="he"] .he-cards article p{font-size:16px;line-height:1.75}
+html[lang="he"] .he-quote{font-size:clamp(22px,3vw,36px);line-height:1.65}
+html[lang="he"] .he-about-hero h1{max-width:14ch}
+@media(max-width:760px){html[lang="he"] .hebrew-page h1{font-size:clamp(39px,9vw,58px)}html[lang="he"] .hebrew-page h2{font-size:clamp(31px,7vw,45px)}html[lang="he"] .hebrew-page .page-lead{font-size:19px}html[lang="he"] .he-hero-copy{gap:18px}}

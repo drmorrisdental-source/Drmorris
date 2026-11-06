@@ -100,3 +100,25 @@ html[lang="he"] .hebrew-page .he-contact .clinic-availability a{color:#FDBA74;te
  main .about-copy .large-copy,html[lang="he"] .hebrew-page .he-about .page-lead{font-size:23px}
  main .contact-bottom>p,html[lang="he"] .hebrew-page .he-contact .clinic-availability{font-size:19px}
 }
+
+
+/* Match navigation typography between English and Hebrew. */
+.header .navigation,html[dir="rtl"] .header .navigation{font-size:17px;font-weight:600;letter-spacing:0;line-height:1.5}
+.header .navigation a,html[dir="rtl"] .header .navigation a{font-size:inherit;line-height:inherit}
+
+/* Mobile only: both homepages display portrait first, then headline and intro. */
+@media(max-width:760px){
+ .header .navigation,html[dir="rtl"] .header .navigation{font-size:17px;line-height:1.5}
+ html[lang="he"] .hebrew-page .he-hero{
+  display:flex;flex-direction:column;align-items:stretch;gap:0;
+  padding:0 6% 48px;min-height:0;
+ }
+ html[lang="he"] .hebrew-page .he-hero>img{
+  order:-1;display:block;position:relative;left:auto;right:auto;bottom:auto;
+  width:calc(100% + 12%);max-width:none;height:360px;max-height:none;
+  margin:0 -6% 28px;object-fit:contain;object-position:center bottom;
+ }
+ html[lang="he"] .hebrew-page .he-hero-copy{
+  order:0;width:100%;position:relative;gap:18px;align-items:flex-start;
+ }
+}

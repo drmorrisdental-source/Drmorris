@@ -45,3 +45,23 @@ html[lang="he"] .he-cards article p{font-size:16px;line-height:1.75}
 html[lang="he"] .he-quote{font-size:clamp(22px,3vw,36px);line-height:1.65}
 html[lang="he"] .he-about-hero h1{max-width:14ch}
 @media(max-width:760px){html[lang="he"] .hebrew-page h1{font-size:clamp(39px,9vw,58px)}html[lang="he"] .hebrew-page h2{font-size:clamp(31px,7vw,45px)}html[lang="he"] .hebrew-page .page-lead{font-size:19px}html[lang="he"] .he-hero-copy{gap:18px}}
+
+
+/* Consistent visual hierarchy for both languages, desktop and mobile */
+:root{--section-heading-size:clamp(36px,4.4vw,62px);--section-label-size:clamp(19px,2vw,25px);--body-copy-size:clamp(16px,1.3vw,18px)}
+.header-actions{gap:12px}.language-switch,.header-cta{height:48px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:0 18px;font-size:15px;font-weight:700;line-height:1;white-space:nowrap}.language-switch{border:1px solid #CBD5E1;color:var(--ink);background:var(--soft)}.header-cta{background:var(--orange)}
+/* Section labels: orange, same hierarchy everywhere, without section numbers */
+main .section-pad>.eyebrow,main .section-pad>.section-top .eyebrow,main .he-panel>.eyebrow,main .he-about>.eyebrow,main .he-testimonials>.eyebrow,main .he-contact>.eyebrow,main .contact>.eyebrow{font-size:var(--section-label-size);font-weight:750;letter-spacing:0;line-height:1.35;color:var(--orange);display:inline-block}
+html[lang="he"] .hebrew-page .eyebrow{font-size:var(--section-label-size);line-height:1.35;letter-spacing:0}
+main .testimonial .eyebrow,main .he-testimonials .eyebrow,main .he-contact .eyebrow{color:#FDBA74}
+/* Matching primary headings throughout the home page, while preserving hero size */
+main .about h2,main .approach h2,main .faq h2,main .contact h2,html[lang="he"] .hebrew-page .he-about h2,html[lang="he"] .hebrew-page .he-panel h2,html[lang="he"] .hebrew-page .he-faq h2,html[lang="he"] .hebrew-page .he-contact h2{font-size:var(--section-heading-size);line-height:1.2;letter-spacing:-.035em;font-weight:650;max-width:none}
+main .about-copy p:not(.large-copy),main .principles p,main .faq details p,main .contact-bottom p,html[lang="he"] .hebrew-page .he-about>p:not(.page-lead),html[lang="he"] .hebrew-page .he-cards p,html[lang="he"] .hebrew-page .he-faq-list details p{font-size:var(--body-copy-size);line-height:1.8}
+main .about-copy .large-copy,html[lang="he"] .hebrew-page .page-lead{font-size:clamp(19px,2vw,25px);line-height:1.65}
+main .principles h3,html[lang="he"] .hebrew-page .he-cards h3{font-size:clamp(22px,2.3vw,29px);line-height:1.35}
+main .testimonial .testimonial-slide{font-size:clamp(21px,2.8vw,34px);line-height:1.55;letter-spacing:0;margin-top:0;max-width:850px}
+html[lang="he"] .hebrew-page .he-quote{font-size:clamp(21px,2.8vw,34px);line-height:1.6;max-width:850px}
+.testimonial-slides{min-height:180px}.he-quote-slides{min-height:170px}.testimonial .quote-mark,.he-quote-mark{font-size:75px}.he-quote-controls{direction:ltr;justify-content:flex-end}.he-quote-controls .he-quote-prev{order:0}.he-quote-controls .he-quote-next{order:1}
+.contact-bottom>p{font-size:var(--body-copy-size);line-height:1.8}.contact .eyebrow{font-size:var(--section-label-size)}
+@media(max-width:760px){:root{--section-heading-size:clamp(36px,9vw,48px);--section-label-size:clamp(19px,5.4vw,23px);--body-copy-size:16px}.header{gap:8px;padding-inline:4%}.wordmark{font-size:clamp(16px,4.4vw,21px)}.header-actions{gap:7px}.language-switch,.header-cta{height:40px;min-height:40px;padding:0 10px;font-size:12px;border-radius:10px}.header-cta,html[dir=rtl] .header-cta{display:inline-flex}.menu-toggle{width:40px;height:40px;flex-shrink:0}.section-pad{padding-block:60px}.he-quote-slides,.testimonial-slides{min-height:170px}.testimonial .testimonial-slide,html[lang="he"] .hebrew-page .he-quote{font-size:clamp(20px,5vw,25px);line-height:1.6}.he-hero{padding-top:48px}.he-hero h1{font-size:clamp(38px,9.5vw,52px)}.he-hero-copy{gap:17px}.he-about h2,.he-panel h2,.he-faq h2,.he-contact h2{overflow-wrap:break-word}.contact-bottom>p{font-size:16px}.testimonial .quote-mark,.he-quote-mark{font-size:65px}}
+@media(max-width:390px){.wordmark{font-size:15px}.language-switch,.header-cta{padding-inline:8px;font-size:11px}.header-actions{gap:5px}.header{gap:5px}}

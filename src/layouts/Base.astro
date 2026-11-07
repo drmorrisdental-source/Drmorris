@@ -16,6 +16,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
+    <script is:inline>try{const preference=localStorage.getItem("drmorris-theme");document.documentElement.dataset.theme=preference==="light"||preference==="dark"?preference:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch{}</script>
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:type" content="website" />

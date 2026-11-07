@@ -1,0 +1,11 @@
+/* Hebrew typography: use Calibri when installed; otherwise retain the existing Hebrew font stack. */
+html[lang="he"] body,
+html[lang="he"] button,
+html[lang="he"] input,
+html[lang="he"] textarea,
+html[lang="he"] select,
+html[lang="he"] .hebrew-page h1,
+html[lang="he"] .hebrew-page h2,
+html[lang="he"] .hebrew-page h3 {
+  font-family: Calibri, Arial, "Noto Sans Hebrew", sans-serif;
+}

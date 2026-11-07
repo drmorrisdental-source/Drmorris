@@ -1,0 +1,9 @@
+/* Hebrew-only typography preview. Calibri is used when available on the device. */
+html[lang="he"] body,
+html[lang="he"] button,
+html[lang="he"] input,
+html[lang="he"] textarea,
+html[lang="he"] select,
+[lang="he"]:not(html) {
+  font-family: Calibri, "Arial", "Noto Sans Hebrew", sans-serif;
+}

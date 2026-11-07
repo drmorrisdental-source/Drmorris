@@ -135,3 +135,31 @@ html[lang="he"] .hebrew-page .he-contact .clinic-availability a{color:#FDBA74;te
 @media(max-width:390px){
  .header .wordmark,html[dir="rtl"] .header .wordmark{font-size:clamp(18px,4.85vw,20px)}
 }
+
+
+/* Deep Navy & Orange: accessible persistent dark appearance */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #CBD5E1;border-radius:12px;background:#F1F5F9;color:#1E293B;cursor:pointer;flex-shrink:0;font-size:21px}
+.theme-toggle:hover{border-color:#EA580C}
+html[data-theme=dark]{color-scheme:dark;--ink:#F5F7FA;--slate:#B7C5D8;--orange:#FF914D;--soft:#172B47;--section-line:#354C67;--reading:#C3CEDC}
+html[data-theme=dark] body{background:#0B1930;color:#F5F7FA}
+html[data-theme=dark] .header{border-color:#354C67}
+html[data-theme=dark] .wordmark,html[data-theme=dark] .faq summary,html[data-theme=dark] .he-faq-list summary{color:#F5F7FA}
+html[data-theme=dark] .theme-toggle,html[data-theme=dark] .language-switch{background:#172B47;color:#FF914D;border-color:#354C67}
+html[data-theme=dark] .hero,html[data-theme=dark] .he-hero,html[data-theme=dark] .clinics-hero,html[data-theme=dark] .he-panel,html[data-theme=dark] .approach,html[data-theme=dark] .education-section,html[data-theme=dark] .clinic-appointments,html[data-theme=dark] .subpage-portrait,html[data-theme=dark] .about-page-photo{background:#172B47}
+html[data-theme=dark] .principles article,html[data-theme=dark] .he-cards article,html[data-theme=dark] .clinic-cards article{background:#172B47;border-color:#354C67;box-shadow:none}
+html[data-theme=dark] .button{background:#FF914D;color:#0B1930}
+html[data-theme=dark] .button:hover{background:#FFAA76}
+html[data-theme=dark] .eyebrow,html[data-theme=dark] .orange-heading,html[data-theme=dark] .item-number,html[data-theme=dark] .degree-item strong,html[data-theme=dark] .he-degrees strong,html[data-theme=dark] .education-row>strong,html[data-theme=dark] .he-education strong{color:#FF914D}
+html[data-theme=dark] .soft-heading,html[data-theme=dark] .muted{color:#B7C5D8}
+html[data-theme=dark] .hero-intro p,html[data-theme=dark] .about-copy p,html[data-theme=dark] .about-copy .large-copy,html[data-theme=dark] .principles p,html[data-theme=dark] .clinic-cards p,html[data-theme=dark] .subpage-hero-copy>p:not(.page-lead),html[data-theme=dark] .philosophy-intro>div>p:last-child,html[data-theme=dark] .contact-bottom>p,html[data-theme=dark] .get-in-touch p,html[data-theme=dark] .hebrew-page p,html[data-theme=dark] .he-cards p,html[data-theme=dark] .hebrew-page .page-lead,html[data-theme=dark] .faq details p,html[data-theme=dark] .he-faq-list details p{color:#C3CEDC}
+html[data-theme=dark] .degree-item b,html[data-theme=dark] .principles h3,html[data-theme=dark] .he-cards h3,html[data-theme=dark] .clinic-cards h3,html[data-theme=dark] .education-row h3,html[data-theme=dark] .he-education h3{color:#F5F7FA}
+html[data-theme=dark] .degree-item small,html[data-theme=dark] .education-row p,html[data-theme=dark] .tiny-note{color:#B7C5D8}
+html[data-theme=dark] .degree-list,html[data-theme=dark] .degree-item,html[data-theme=dark] .education-row,html[data-theme=dark] .he-education>div,html[data-theme=dark] .he-degrees,html[data-theme=dark] .he-degrees p,html[data-theme=dark] .faq details,html[data-theme=dark] .he-faq-list details,html[data-theme=dark] .contact,html[data-theme=dark] footer{border-color:#354C67}
+html[data-theme=dark] .testimonial,html[data-theme=dark] .he-testimonials,html[data-theme=dark] .he-contact,html[data-theme=dark] .subpage-contact{background:#172B47}
+html[data-theme=dark] .coming-soon-label,html[data-theme=dark] .menu-toggle,html[data-theme=dark] .navigation{background:#172B47;color:#F5F7FA;border-color:#354C67}
+html[data-theme=dark] .menu-toggle span{background:#F5F7FA}
+html[data-theme=dark] .footer-socials a{color:#F5F7FA;border-color:#354C67}
+html[data-theme=dark] .footer-socials a:hover{color:#FF914D;background:#172B47}
+html[data-theme=dark] .he-contact p{color:#C3CEDC!important}
+html[data-theme=dark] .he-hero img,html[data-theme=dark] .hero-photo img{isolation:isolate}
+@media(max-width:760px){.theme-toggle{width:36px;height:36px}.header-actions{gap:8px!important}}

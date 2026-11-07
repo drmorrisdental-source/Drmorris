@@ -163,3 +163,13 @@ html[data-theme=dark] .footer-socials a:hover{color:#FF914D;background:#172B47}
 html[data-theme=dark] .he-contact p{color:#C3CEDC!important}
 html[data-theme=dark] .he-hero img,html[data-theme=dark] .hero-photo img{isolation:isolate}
 @media(max-width:760px){.theme-toggle{width:36px;height:36px}.header-actions{gap:8px!important}}
+
+/* Refined line-art theme control, no emoji glyphs */
+.theme-toggle{transition:background .2s,border-color .2s,transform .2s}
+.theme-toggle:hover{transform:translateY(-1px)}
+.theme-icon{display:inline-flex;align-items:center;justify-content:center}
+.theme-icon svg{display:block}
+.theme-icon .icon-sun{display:none}
+html[data-theme=dark] .theme-icon .icon-moon{display:none}
+html[data-theme=dark] .theme-icon .icon-sun{display:block}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
